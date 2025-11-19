@@ -1,0 +1,645 @@
+/* Reset basics */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #302c28;
+}
+
+/* Container for consistent width */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header / Nav */
+header {
+  background: #61605e;
+  color: #fff;
+  padding: 1rem 0;
+}
+.logo { font-size: 1.5rem; font-weight: 700; }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links a:hover { text-decoration: underline; }
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.btn {
+  display: inline-block;
+  background: #1f1b17;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn:hover { background: #e56a00; }
+
+/* Sections */
+section { padding: 60px 0; }
+section h2 { text-align: center; margin-bottom: 30px; }
+
+/* Services layout */
+.service-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.service {
+  background: #f4f4f4;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-boxes { flex-direction: column; align-items: center; }
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  padding: 40px;
+  color: #333;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+/* Table styling */
+table {
+  width: 70%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #f81d8a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* rounds corners */
+}
+
+/* Table caption */
+caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px;
+  color: #fda9d0; /* accent color */
+  text-align: center;
+}
+
+/* Header cells */
+th {
+  background-color: #db2e76;
+  color: #e77a9f;
+  font-weight: 600;
+  padding: 12px 18px;
+  text-align: left;
+}
+
+/* Data cells */
+td {
+  padding: 12px 18px;
+  border-bottom: 1px solid #d63a95;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+  background-color: #df6d99;
+}
+
+/* Hover effect */
+tr:hover {
+  background-color: #e662af;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  table {
+    width: 95%;
+  }
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* ----- About Hero Section ----- */
+.about-hero {
+  background: #38bdf8; /* bright accent color */
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* ----- About Content ----- */
+.about-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #363534;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+/* ----- Team Section ----- */
+.team-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-member {
+  background: #b6afaf;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  flex: 1 1 30%;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+  color: #1e293b;
+}
+
+.team-member p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
+  }
+}
+
+/* ----- General ----- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #1e293b;
+}
+
+/* ----- Header ----- */
+header {
+  background: #1e293b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #38bdf8;
+}
+
+/* ----- Hero Section ----- */
+.contact-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #38bdf8;
+  color: #fff;
+}
+
+.contact-hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+/* ----- Contact Container ----- */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form form button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form form button:hover {
+  background: #0ea5e9;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* ----- Footer ----- */
+footer {
+  background: #1e293b;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+/* ----- General ----- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  color: #1e293b;
+}
+
+/* ----- Header ----- */
+header {
+  background: #1e293b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #38bdf8;
+}
+
+/* ----- Hero Section ----- */
+.fragrance-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #373b3d;
+  color: #fff;
+}
+
+.fragrance-hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+/* ----- Fragrance Cards ----- */
+.fragrance-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.fragrance-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+}
+
+.fragrance-card:hover {
+  transform: translateY(-5px);
+}
+
+.fragrance-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.fragrance-card .price {
+  font-weight: bold;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.fragrance-card button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fragrance-card button:hover {
+  background: #0ea5e9;
+}
+
+/* ----- Footer ----- */
+footer {
+  background: #1e293b;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .fragrance-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ----- General ----- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  color: #1e293b;
+}
+
+/* ----- Header ----- */
+header {
+  background: #1e293b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #38bdf8;
+}
+
+/* ----- Hero Section ----- */
+.fashion-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #38bdf8;
+  color: #fff;
+}
+
+.fashion-hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+/* ----- Fashion Cards ----- */
+.fashion-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.fashion-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
+}
+
+.fashion-card:hover {
+  transform: translateY(-5px);
+}
+
+.fashion-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.fashion-card .price {
+  font-weight: bold;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.fashion-card button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fashion-card button:hover {
+  background: #16b4b9;
+}
+
+/* ----- Footer ----- */
+footer {
+  background: #1e293b;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .fashion-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

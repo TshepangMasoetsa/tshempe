@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header>
+    <div class="logo">MyBrand</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="fragance.html">Fragrance</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="registration.html">register</a></li>
+        <li><a href="otp.html">OTP</a></li>
+        <li><a href="login.html">login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Verify OTP</h2>
+    <p>Enter the 6-digit OTP sent to your email:</p>
+
+    <input type="text" id="otpInput" placeholder="Enter OTP">
+
+    <button onclick="verifyOTP()" class="btn">Verify</button>
+
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    function verifyOTP() {
+      let entered = document.getElementById("otpInput").value;
+      let realOtp = localStorage.getItem("otp");
+
+      if (entered === realOtp) {
+        document.getElementById("msg").innerHTML = "✔ OTP Verified!";
+        document.getElementById("msg").style.color = "green";
+
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 1500);
+      } else {
+        document.getElementById("msg").innerHTML = "❌ Wrong OTP!";
+        document.getElementById("msg").style.color = "red";
+      }
+    }
+
+
+
+  </script>
+
+<script src="java.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="fragance.html">Fragrance</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="registration.html">register</a></li>
+        <li><a href="otp.html">OTP</a></li>
+        <li><a href="login.html">login</a></li>
+      </ul>
+
+  </nav>
+</header>
+
+<section class="login-container">
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password" required>
+
+    <button type="submit">Login</button>
+  </form>
+  <p id="loginMessage"></p>
+</section>
+
+<script>
+const loginForm = document.getElementById("loginForm");
+const loginMessage = document.getElementById("loginMessage");
+
+loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const verified = localStorage.getItem("verified");
+
+    if (!storedUser) {
+        loginMessage.textContent = "No registered user found!";
+        loginMessage.style.color = "red";
+        return;
+    }
+
+    if (email === storedUser.email && password === storedUser.password && verified === "true") {
+        loginMessage.textContent = `Welcome back, ${storedUser.fullname}!`;
+        loginMessage.style.color = "green";
+        setTimeout(() => window.location.href = "home.html", 1500);
+    } else if (verified !== "true") {
+        loginMessage.textContent = "Please verify your OTP first!";
+        loginMessage.style.color = "orange";
+    } else {
+        loginMessage.textContent = "Invalid email or password!";
+        loginMessage.style.color = "red";
+    }
+});
+</script>
+
+</body>
+</html>
